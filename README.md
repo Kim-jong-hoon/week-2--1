@@ -22,7 +22,6 @@ obstacles = []
 
 for direction, distance in sensors.items():
     if distance < safe_distance:
-        # 안전 거리보다 가까우면 장애물로 간주하고 추가
         obstacles.append(direction)
 
 
