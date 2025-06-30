@@ -7,26 +7,25 @@
 
 
 
-# 초기 센서 거리 설정
 sensors = {
-    "front": 8.0,   # 앞쪽 센서 거리
-    "left": 15.0,   # 왼쪽 센서 거리
-    "right": 4.0    # 오른쪽 센서 거리
+    "front": 8.0,   
+    "left": 15.0,   
+    "right": 4.0  
 }
 
-# 안전 거리 기준 설정
+
 safe_distance = 10.0
 
-# 장애물 리스트 초기화
+
 obstacles = []
 
-# 센서 데이터 순차적으로 확인
+
 for direction, distance in sensors.items():
     if distance < safe_distance:
         # 안전 거리보다 가까우면 장애물로 간주하고 추가
         obstacles.append(direction)
 
-# 결과 출력
+
 if obstacles:
     print("장애물 발견된 위치:", obstacles)
 else:
